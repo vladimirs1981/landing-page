@@ -1,0 +1,478 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: "Red Hat Display", sans-serif;
+	min-height: 100vh;
+	line-height: 26px;
+	width: 100%;
+}
+
+.container {
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+header {
+	display: grid;
+	grid-template-columns: 1fr repeat(2, minmax(100px, 1fr)) 1fr;
+	grid-template-rows: auto;
+	width: 100%;
+	align-items: center;
+}
+
+.logo {
+	grid-column: 2/-2;
+	grid-row: 1/1;
+	justify-self: center;
+	margin: 3em 0 2em 0;
+}
+
+.left-side {
+	grid-column: 1/3;
+	grid-row: 2/2;
+	justify-self: end;
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	gap: 17px;
+	right: 17px;
+}
+
+.right-side {
+	grid-column: 3/-1;
+	grid-row: 2/2;
+	justify-self: start;
+	position: relative;
+	align-self: end;
+	display: flex;
+	justify-content: space-around;
+	max-width: 100%;
+	height: auto;
+	gap: 17px;
+	left: 17px;
+}
+.avatar-group-1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	row-gap: 0.5em;
+}
+
+.avatar-group-1.down-left {
+	position: relative;
+	top: 40px;
+	left: 0;
+}
+
+.avatar-group-1.down-right {
+	position: relative;
+	top: 40px;
+	right: 0;
+}
+
+.avatar img {
+	border-radius: 50%;
+	width: auto;
+	height: auto;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.up-text {
+	grid-column: 1/-1;
+	grid-row: 3/3;
+	max-width: 540px;
+	margin-top: 10em;
+}
+
+.up-text h1 {
+	padding: 22px;
+	text-align: center;
+	line-height: 44px;
+	font-size: 40px;
+	margin-bottom: 20px;
+	font-weight: 900;
+	font-family: Red Hat Display;
+	font-style: normal;
+}
+
+.up-text p {
+	text-align: center;
+	color: rgb(135, 135, 157);
+	font-size: 16px;
+	line-height: 26px;
+	margin: 2em auto 2em auto;
+	width: 88%;
+}
+
+.download-btn {
+	background: rgb(77, 150, 169);
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding: 20px;
+	color: white;
+	border-radius: 29px;
+	border: none;
+	width: 193px;
+	height: 58px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	line-height: 26px;
+	font-family: "Red Hat Display", sans-serif;
+	padding: 0;
+}
+
+.download-btn span {
+	color: rgb(143, 227, 249);
+}
+
+.violet-btn {
+	background: rgb(133, 95, 177);
+	font-size: 16px;
+	color: white;
+	padding: 20px;
+	border-radius: 29px;
+	width: 139px;
+	height: 58px;
+	font-family: "Red Hat Display", sans-serif;
+	padding: 0;
+	border: none;
+	margin-bottom: 50px;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.button-01 {
+	background: #fafafa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	border: 1px solid rgba(135, 135, 157, 0.25);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	box-sizing: border-box;
+	font-family: Red Hat Display;
+	font-size: 16px;
+	margin-top: 6em;
+	margin-bottom: 2em;
+}
+
+.button-01 p {
+	color: rgb(135, 135, 157);
+	font-size: 16px;
+	font-weight: 900;
+}
+
+.button-01::before {
+	content: "";
+	position: absolute;
+	mix-blend-mode: normal;
+	height: 84px;
+	background: rgb(135, 135, 157);
+	bottom: 55px;
+	opacity: 0.25;
+	border: 1px solid #87879d;
+}
+
+.grid-pictures {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.top-left,
+.bottom-left,
+.top-right,
+.bottom-right {
+	object-fit: cover;
+	width: 100%;
+}
+
+.top-left > img,
+.bottom-left > img,
+.top-right > img,
+.bottom-right > img {
+	object-fit: cover;
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+.down-text {
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 573px;
+}
+
+.down-text h4 {
+	text-align: center;
+	font-size: 16px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: rgb(77, 150, 169);
+	font-weight: 900;
+}
+
+.down-text h1 {
+	font-weight: 900;
+	font-size: 32px;
+	line-height: 36px;
+	text-align: center;
+	color: rgb(40, 40, 61);
+	width: 80%;
+	padding-top: 1em;
+}
+
+.down-text p {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 26px;
+	padding: 25px;
+	text-align: center;
+	color: #87879d;
+}
+
+.bottom-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: rgb(77, 150, 169);
+	position: relative;
+	height: 426px;
+	width: 100%;
+}
+
+.bottom-card::before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-image: url(/Dizajn/meet-landing-page/starter-code/assets/mobile/image-footer.jpg);
+	opacity: 0.1;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position-x: center;
+}
+
+.bottom-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.bottom-card h1 {
+	font-style: normal;
+	font-weight: 900;
+	font-size: 32px;
+	line-height: 36px;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	color: #fafafa;
+	margin-top: 2em;
+}
+
+.bottom-card p {
+	position: relative;
+	z-index: 1;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 26px;
+	text-align: center;
+	color: #fafafa;
+	margin: 5px 10px;
+	padding: 20px;
+}
+
+.button-02 {
+	position: absolute;
+	top: -79px;
+	background: #fafafa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	border: 1px solid rgba(135, 135, 157, 0.25);
+	box-sizing: border-box;
+	font-family: Red Hat Display;
+	font-size: 16px;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	z-index: 1;
+}
+
+.button-02 p {
+	font-size: 16px;
+	font-weight: 900;
+	color: #5b5bc6;
+}
+
+.button-02::before {
+	content: "";
+	position: absolute;
+	mix-blend-mode: normal;
+	height: 84px;
+	background: rgb(135, 135, 157);
+	bottom: 55px;
+	opacity: 0.25;
+	border: 1px solid #87879d;
+}
+
+.download-btn-violet {
+	position: relative;
+	z-index: 1;
+	background: rgb(133, 95, 177);
+	font-size: 16px;
+	margin-top: 0.5em;
+	margin-bottom: 2em;
+	padding: 20px;
+	color: white;
+	border-radius: 29px;
+	border: none;
+	width: 193px;
+	height: 58px;
+	line-height: 26px;
+	font-family: "Red Hat Display";
+	font-style: normal;
+	padding: 0;
+	font-weight: 900;
+}
+
+.download-btn-violet span {
+	color: rgb(217, 184, 255);
+}
+
+@media only screen and (min-width: 540px) {
+	.up-text {
+		grid-column: 2/-2;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	header {
+		justify-items: center;
+		justify-content: center;
+	}
+
+	.up-text {
+		margin-top: 5em;
+	}
+
+	.up-text h1 {
+		font-size: 48px;
+		line-height: 48px;
+	}
+
+	.buttons {
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.download-btn {
+		margin: 0.5em;
+		filter: none;
+	}
+
+	.violet-btn {
+		margin: 0.5em;
+	}
+
+	.button-01 {
+		margin-top: 9em;
+	}
+
+	.grid-pictures {
+		display: flex;
+		justify-content: space-evenly;
+		gap: 0.5em;
+	}
+
+	.bottom-card {
+		margin-top: 10em;
+	}
+
+	.bottom-card::before {
+		background-image: url(/Dizajn/meet-landing-page/starter-code/assets/tablet/image-footer.jpg);
+	}
+
+	.bottom-card h1 {
+		display: inline-block;
+		width: 50%;
+		margin-top: 1em;
+		font-size: 40px;
+		line-height: 44px;
+	}
+
+	.bottom-card p {
+		display: inline-block;
+		width: 80%;
+		padding: 0;
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+
+	@media screen and (min-width: 1200px) {
+		.left-side {
+			grid-column: 1/2;
+			justify-self: baseline;
+			left: -7%;
+			align-self: start;
+		}
+
+		.right-side {
+			grid-column: 4/4;
+
+			left: 7%;
+			align-self: start;
+		}
+
+		.up-text {
+			grid-column: 1/-1;
+			grid-row: 2/2;
+			margin: 0;
+		}
+
+		.bottom-content {
+			flex-direction: row;
+		}
+
+		.bottom-card::before {
+			background-image: url(/Dizajn/meet-landing-page/starter-code/assets/desktop/image-footer.jpg);
+		}
+	}
+}
