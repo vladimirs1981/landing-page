@@ -450,7 +450,7 @@ header {
 		.left-side {
 			grid-column: 1/2;
 			justify-self: baseline;
-			left: -7%;
+			left: -10%;
 			align-self: start;
 		}
 
