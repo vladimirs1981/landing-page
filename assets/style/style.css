@@ -305,7 +305,7 @@ header {
 	right: 0px;
 	bottom: 0px;
 	left: 0px;
-	background-image: url(/Dizajn/meet-landing-page/starter-code/assets/mobile/image-footer.jpg);
+	background-image: url(../mobile/image-footer.jpg);
 	opacity: 0.1;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -531,7 +531,7 @@ header {
 	}
 
 	.bottom-card::before {
-		background-image: url(/Dizajn/meet-landing-page/starter-code/assets/tablet/image-footer.jpg);
+		background-image: url(../tablet/image-footer.jpg);
 	}
 
 	.bottom-card h1 {
@@ -651,7 +651,7 @@ header {
 		}
 
 		.bottom-card::before {
-			background-image: url(/Dizajn/meet-landing-page/starter-code/assets/desktop/image-footer.jpg);
+			background-image: url(../desktop/image-footer.jpg);
 			background-size: contain;
 			background-repeat: no-repeat;
 		}
