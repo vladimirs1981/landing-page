@@ -1,0 +1,46 @@
+@use '_variables' as *;
+@use '_media-query' as *;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: "Red Hat Display", sans-serif;
+	min-height: 100vh;
+	line-height: 26px;
+	width: 100%;
+}
+
+.container {
+	margin: 0 auto;
+	overflow: hidden;
+
+	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		max-width: 375px;
+
+		@include screen-min(480px) {
+			width: 100%;
+			max-width: 768px;
+		}
+
+		@include screen-min(820px) {
+			width: 100%;
+			max-width: 1440px;
+		}
+
+		@include screen-min($desktop-width) {
+			width: 100%;
+			max-width: 1440px;
+		}
+	}
+}

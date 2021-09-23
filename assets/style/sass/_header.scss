@@ -1,0 +1,282 @@
+@use "_variables" as *;
+@use "_media-query" as *;
+
+%pictureFlex {
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	min-height: 188px;
+	height: 100%;
+	gap: 16px;
+	align-items: flex-start;
+}
+
+header {
+	display: grid;
+	grid-template-columns: 1fr repeat(2, minmax(100px, 1fr)) 1fr;
+	grid-template-rows: auto;
+	width: 100%;
+	align-items: center;
+
+	@include screen-min($tablet-width) {
+		justify-items: center;
+		justify-content: center;
+	}
+
+	.logo {
+		grid-column: 2/-2;
+		grid-row: 1/1;
+		justify-self: center;
+		margin-top: 52px;
+		margin-bottom: 47px;
+
+		@include screen-min($tablet-width) {
+			margin-top: 48px;
+			margin-bottom: 64px;
+		}
+
+		@include screen-min($desktop-width) {
+			margin-top: 80px;
+			margin-bottom: 61px;
+		}
+	}
+
+	.left-side {
+		grid-column: 1/3;
+		grid-row: 2/2;
+		justify-self: end;
+		justify-content: space-around;
+		right: 10px;
+		@extend %pictureFlex;
+
+		@include screen-min($tablet-width) {
+			right: 16px;
+			gap: 32px;
+		}
+
+		@include screen-min($desktop-width) {
+			grid-column: 1/2;
+			justify-self: baseline;
+			left: -10%;
+			align-self: start;
+			top: -7px;
+		}
+	}
+
+	.right-side {
+		grid-column: 3/-1;
+		grid-row: 2/2;
+		justify-self: start;
+		align-self: end;
+		left: 10px;
+		@extend %pictureFlex;
+
+		@include screen-min($tablet-width) {
+			left: 16px;
+			gap: 32px;
+		}
+
+		@include screen-min($desktop-width) {
+			grid-column: 4/4;
+			left: 7%;
+			align-self: start;
+			top: 47px;
+		}
+	}
+
+	.avatar-group-1 {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		row-gap: 0.5em;
+
+		@include screen-min($tablet-width) {
+			row-gap: 26px;
+		}
+	}
+
+	.avatar-group-1.down-left {
+		position: relative;
+		top: 20px;
+		left: 0;
+
+		@include screen-min($tablet-width) {
+			top: 50px;
+		}
+	}
+
+	.avatar-group-1.down-right {
+		position: relative;
+		top: 20px;
+		right: 0;
+
+		@include screen-min($tablet-width) {
+			top: 50px;
+		}
+	}
+
+	.avatar {
+		margin: 0;
+		padding: 0;
+		min-width: 56px;
+		width: 100%;
+		min-height: 56px;
+		height: 100%;
+
+		img {
+			border-radius: 50%;
+			width: 100%;
+			height: auto;
+			min-height: 54px;
+			min-width: 56px;
+
+			@include screen-min(480px) {
+				width: 100%;
+				height: auto;
+				max-width: 110px;
+				max-height: 110px;
+			}
+
+			@include screen-min($tablet-width) {
+				width: 110px;
+				height: 110px;
+			}
+
+			@include screen-min($desktop-width) {
+				min-width: 110px;
+				min-height: 110px;
+			}
+		}
+	}
+
+	.up-text {
+		grid-column: 1/-1;
+		grid-row: 3/3;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+
+		@include screen-min($tablet-width) {
+			margin-top: 105px;
+			margin-bottom: 72px;
+		}
+
+		@include screen-min($desktop-width) {
+			grid-column: 1/-1;
+			grid-row: 2/2;
+			margin: 0;
+			width: 540px;
+			margin-top: 36px;
+			margin-bottom: 81px;
+		}
+
+		h1 {
+			padding: 0 42px 0 42px;
+			text-align: center;
+			line-height: 44px;
+			font-size: 40px;
+			font-weight: 900;
+			font-family: $primaryFont;
+			font-style: normal;
+			margin-bottom: 18px;
+
+			@include screen-min($tablet-width) {
+				font-size: 48px;
+				line-height: 48px;
+				padding: 0;
+				margin-bottom: 24px;
+				width:339px;
+			}
+
+			@include screen-min($desktop-width) {
+				width: 445px;
+				font-size: 64px;
+				line-height: 64px;
+				margin-bottom: 34px;
+			}
+		}
+
+		p {
+			text-align: center;
+			color: $greyishColor;
+			font-size: 16px;
+			line-height: 26px;
+			width: 88%;
+			margin-bottom: 32px;
+
+			@include screen-min($tablet-width) {
+				width: 457px;
+				margin-bottom: 24px;
+			}
+
+			@include screen-min($desktop-width) {
+				font-size: 18px;
+				width: 540px;
+				margin-bottom: 32px;
+			}
+		}
+
+		.buttons {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			@include screen-min($tablet-width) {
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.download-btn {
+				background: $dwnBtnPrimaryColor;
+				font-size: 16px;
+				margin-bottom: 16px;
+				padding: 20px;
+				color: white;
+				border-radius: 29px;
+				border: none;
+				width: 193px;
+				height: 58px;
+				filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+				line-height: 26px;
+				font-family: $primaryFont;
+				padding: 0;
+				&:hover {
+					background: $dwnBtnHoverColor;
+				}
+
+				span {
+					color: $dwnBrnSpanColor;
+				}
+
+				@include screen-min($tablet-width) {
+					margin: 0.5em;
+					filter: none;
+				}
+			}
+
+			.violet-btn {
+				background: $whatIsBtnPrimaryColor;
+				font-size: 16px;
+				color: white;
+				padding: 20px;
+				border-radius: 29px;
+				width: 139px;
+				height: 58px;
+				font-family: "Red Hat Display", sans-serif;
+				padding: 0;
+				border: none;
+				margin-bottom: 64px;
+				&:hover {
+					background: $whatIsBtnHoverColor;
+				}
+
+				@include screen-min($tablet-width) {
+					margin: 0.5em;
+				}
+			}
+		}
+	}
+}
