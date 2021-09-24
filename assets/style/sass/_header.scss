@@ -179,6 +179,7 @@ header {
 			font-size: 40px;
 			font-weight: 900;
 			font-family: $primaryFont;
+			color: $blackishTextColor;
 			font-style: normal;
 			margin-bottom: 18px;
 
@@ -187,7 +188,7 @@ header {
 				line-height: 48px;
 				padding: 0;
 				margin-bottom: 24px;
-				width:339px;
+				width: 339px;
 			}
 
 			@include screen-min($desktop-width) {
@@ -205,6 +206,7 @@ header {
 			line-height: 26px;
 			width: 88%;
 			margin-bottom: 32px;
+			font-weight: 500;
 
 			@include screen-min($tablet-width) {
 				width: 457px;
@@ -234,18 +236,15 @@ header {
 				font-size: 16px;
 				margin-bottom: 16px;
 				padding: 20px;
-				color: white;
+				color: $button02Color;
 				border-radius: 29px;
 				border: none;
 				width: 193px;
 				height: 58px;
-				filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+				filter: drop-shadow(0px 4px 4px $shadowColor);
 				line-height: 26px;
 				font-family: $primaryFont;
 				padding: 0;
-				&:hover {
-					background: $dwnBtnHoverColor;
-				}
 
 				span {
 					color: $dwnBrnSpanColor;
@@ -255,26 +254,43 @@ header {
 					margin: 0.5em;
 					filter: none;
 				}
+
+				@include screen-min($desktop-width) {
+					&:hover {
+						background: $dwnBtnHoverColor;
+						cursor: pointer;
+					}
+					&:active {
+						background: $dwnBtnPrimaryColor;
+					}
+				}
 			}
 
 			.violet-btn {
 				background: $whatIsBtnPrimaryColor;
 				font-size: 16px;
-				color: white;
+				color: $button02Color;
 				padding: 20px;
 				border-radius: 29px;
 				width: 139px;
 				height: 58px;
-				font-family: "Red Hat Display", sans-serif;
+				font-family: $primaryFont;
 				padding: 0;
 				border: none;
 				margin-bottom: 64px;
-				&:hover {
-					background: $whatIsBtnHoverColor;
-				}
 
 				@include screen-min($tablet-width) {
 					margin: 0.5em;
+				}
+
+				@include screen-min($desktop-width) {
+					&:hover {
+						background: $whatIsBtnHoverColor;
+						cursor: pointer;
+					}
+					&:active {
+						background: $whatIsBtnPrimaryColor;
+					}
 				}
 			}
 		}

@@ -28,25 +28,25 @@
 			background-image: url(../../tablet/image-footer.jpg);
 		}
 
-        @include screen-min($desktop-width) {
-            background-image: url(../../desktop/image-footer.jpg);
+		@include screen-min($desktop-width) {
+			background-image: url(../../desktop/image-footer.jpg);
 			background-size: contain;
 			background-repeat: no-repeat;
-        }
+		}
 	}
 
 	@include screen-min($tablet-width) {
 		margin-top: 10em;
 	}
 
-    @include screen-min($desktop-width) {
-        align-items: center;
-        justify-content: center;
-        margin-top: 184px;
-        width: 100%;
-        height: 0;
-        padding-top: 21.38%;
-    }
+	@include screen-min($desktop-width) {
+		align-items: center;
+		justify-content: center;
+		margin-top: 184px;
+		width: 100%;
+		height: 0;
+		padding-top: 21.38%;
+	}
 
 	.button-02 {
 		position: absolute;
@@ -58,7 +58,7 @@
 		width: 56px;
 		height: 56px;
 		border-radius: 50%;
-		border: 1px solid rgba(135, 135, 157, 0.25);
+		border: 1px solid $border01Color;
 		box-sizing: border-box;
 		font-family: $primaryFont;
 		font-size: 16px;
@@ -72,13 +72,14 @@
 			background: $greyishColor;
 			bottom: 55px;
 			opacity: 0.25;
-			border: 1px solid $paragrafColor;
+			border: 1px solid $greyishColor;
 		}
 
-		span {
+		a {
 			font-size: 16px;
 			font-weight: 900;
-			color: $paragrafColor;
+			color: $greyishColor;
+			text-decoration: none;
 		}
 	}
 
@@ -87,11 +88,11 @@
 		flex-direction: column;
 		align-items: center;
 
-        @include screen-min($desktop-width) {
-            flex-direction: row;
+		@include screen-min($desktop-width) {
+			flex-direction: row;
 			position: absolute;
 			bottom: 110px;
-        }
+		}
 
 		h1 {
 			font-style: normal;
@@ -101,7 +102,7 @@
 			text-align: center;
 			position: relative;
 			z-index: 1;
-			color: #fafafa;
+			color: $button02Color;
 			margin-top: 23px;
 			margin-bottom: 24px;
 
@@ -114,12 +115,12 @@
 				line-height: 44px;
 			}
 
-            @include screen-min($desktop-width) {
-                width: 350px;
-                text-align: left;
-                margin: 0;
-                margin-right: 125px;
-            }
+			@include screen-min($desktop-width) {
+				width: 350px;
+				text-align: left;
+				margin: 0;
+				margin-right: 125px;
+			}
 		}
 
 		p {
@@ -129,7 +130,7 @@
 			font-size: 18px;
 			line-height: 26px;
 			text-align: center;
-			color: #fafafa;
+			color: $button02Color;
 			margin-bottom: 35px;
 			padding: 0 30px 0 30px;
 
@@ -140,12 +141,12 @@
 				margin-bottom: 40px;
 			}
 
-            @include screen-min($desktop-width) {
-                width: 350px;
-                text-align: left;
-                margin: 0;
-                margin-right: 92px;
-            }
+			@include screen-min($desktop-width) {
+				width: 350px;
+				text-align: left;
+				margin: 0;
+				margin-right: 92px;
+			}
 		}
 
 		.download-btn-violet {
@@ -154,27 +155,34 @@
 			background: $whatIsBtnPrimaryColor;
 			font-size: 16px;
 			padding: 20px;
-			color: white;
+			color: $button02Color;
 			border-radius: 29px;
 			border: none;
 			width: 193px;
 			height: 58px;
 			line-height: 26px;
-			font-family: "Red Hat Display";
+			font-family: $primaryFont;
 			font-style: normal;
 			padding: 0;
 			font-weight: 900;
-			&:hover {
-				background: $whatIsBtnHoverColor;
-			}
 
 			span {
 				color: $violetBtnSpanColor;
 			}
 
-            @include screen-min($tablet-width) {
-                margin: 0;
-            }
+			@include screen-min($tablet-width) {
+				margin: 0;
+			}
+
+			@include screen-min($desktop-width) {
+				&:hover {
+					background: $whatIsBtnHoverColor;
+					cursor: pointer;
+				}
+				&:active {
+					background: $whatIsBtnPrimaryColor;
+				}
+			}
 		}
 	}
 }

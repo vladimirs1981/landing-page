@@ -10,7 +10,7 @@
 body {
 	display: flex;
 	flex-direction: column;
-	font-family: "Red Hat Display", sans-serif;
+	font-family: $primaryFont;
 	min-height: 100vh;
 	line-height: 26px;
 	width: 100%;
