@@ -1,0 +1,65 @@
+@use "_variables" as *;
+@use "_media-query" as *;
+
+.down-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 573px;
+	margin-bottom: 180px;
+
+	@include screen-min($tablet-width) {
+		margin-bottom: 3px;
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 16px;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		color: $dwnBtnPrimaryColor;
+		font-weight: 900;
+		margin-bottom: 24px;
+
+		@include screen-min($tablet-width) {
+			margin-bottom: 16px;
+		}
+	}
+
+	h1 {
+		font-weight: 900;
+		font-size: 32px;
+		line-height: 36px;
+		text-align: center;
+		color: $blackishTextColor;
+		width: 80%;
+		margin-bottom: 32px;
+
+		@include screen-min($tablet-width) {
+			width: 445px;
+			font-size: 40px;
+			line-height: 44px;
+		}
+	}
+
+	p {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 26px;
+		padding: 0 25px 0 25px;
+		text-align: center;
+		color: $greyishColor;
+
+		@include screen-min($tablet-width) {
+			width: 573px;
+			padding: 0;
+		}
+
+        @include screen-min($desktop-width) {
+            font-size: 18px;
+			width: 540px;
+        }
+	}
+}
